@@ -175,13 +175,8 @@ describe("slightOfHand", () => {
 // maybe use a for loop or maybe .map
 
 const slightOfHand = array =>{
-    for (let i = 0; i < array.length; i++) {
-        if ((array[i] === array[i+2]) && (array[i+3] === array[i+4])) {
-            return true
-        }else if ((array[i] === array[i+1]) && (array[i+2] === array[i+4])) {
-            return true
-        }else {
-            return false
-        }
+    for (let i = 0; i < array.sort().length; i++) {
+    win =  (((array[0] === array[2])&&(array[3] === array[4])) || ((array[0] === array[1])&&(array[2] === array[4])))
+    return win
     }
 }

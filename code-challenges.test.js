@@ -115,7 +115,15 @@ describe("finder", () => {
 /// my function will need to itterate over the array of words
 //// looking for letterA    maybe .contain 
 ///// might have to break up the array into strings.
-
+const finder = (array, letter) =>{
+    temp = []
+    array.filter(value=>{
+        if (value.includes(letter) || value.includes(letter.toUpperCase()))
+    //maybe the I can just check the value with conditonals
+        temp.push(value)
+    })
+    return temp
+}
 
 
 
@@ -139,14 +147,41 @@ describe("finder", () => {
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is exactly one pair and one three of a kind.
 
 // a) Create a test with expect statements using the variable provided.
+describe("slightOfHand", () => {
+    
+    const hand1 = [5, 5, 5, 3, 3]
+    let output1 = true
+    const hand2 = [5, 5, 3, 3, 4]
+    let output2 = false
+    const hand3 = [5, 5, 5, 5, 4]
+    let output3 = false
 
-const hand1 = [5, 5, 5, 3, 3]
-// Expected output: true
-const hand2 = [5, 5, 3, 3, 4]
-// Expected output: false
-const hand3 = [5, 5, 5, 5, 4]
-// Expected output: false
+   it("takes in an array of 5 numbers and determines whether or not the array is a “full house”. A full house is exactly one pair and one three of a kind", () => {
+     expect(slightOfHand(hand1)).toEqual(output1)
+     expect(slightOfHand(hand2)).toEqual(output2)
+     expect(slightOfHand(hand3)).toEqual(output3)
+   })
+})
 
 
-
+//ReferenceError: slightOfHand is not defined
 // b) Create the function that makes the test pass.
+//() =>
+    // needs to take in an array slightOfHand
+    // the array must be compared against win conditonals
+            // if array value at index 012 are equals AND 34 are the same you win
+            // or array value at index 01 are equals AND 234 are the same you win
+            // will have to sort them from hightes to lowest
+// maybe use a for loop or maybe .map
+
+const slightOfHand = array =>{
+    for (let i = 0; i < array.length; i++) {
+        if ((array[i] === array[i+2]) && (array[i+3] === array[i+4])) {
+            return true
+        }else if ((array[i] === array[i+1]) && (array[i+2] === array[i+4])) {
+            return true
+        }else {
+            return false
+        }
+    }
+}

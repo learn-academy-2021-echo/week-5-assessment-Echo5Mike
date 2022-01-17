@@ -43,11 +43,7 @@ describe("cryptex", () => {
 // make aeio into variables
 //          something about replace
 const cryptex = string =>{
-    let rea = /a/gi
-    let ree = /e/gi
-    let rei = /i/gi
-    let reo = /o/gi
-    let stringThatWaz = string.replace(rea, 4).replace(ree, 3).replace(rei, 1).replace(reo, 0)
+    let stringThatWaz = string.replace(/a/gi, 4).replace(/e/gi, 3).replace(/i/gi, 1).replace(/o/gi, 0)
     return stringThatWaz
 }
 

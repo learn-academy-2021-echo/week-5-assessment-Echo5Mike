@@ -59,12 +59,12 @@ Then, research the question to expand on your answer. Even if you feel you have 
 ## Looking Ahead: Terms for Next Week
 Research and define the following terms to the best of your ability.
 
-1. RESTful routes:
+1. RESTful routes: Respresentional state transfer, is a standard way to mapp HTTP methods of GET, POST, PATCH, DELETE) and CRUD actions (Create, Read, Update, Destroy) together in a conventional pattern
 
-2. JSON:
+2. JSON: Is a standard file format that is used in data interchange.  
 
-3. ERB:
+3. ERB: Is HTML with ruby code 
 
-4. Params:
+4. Params: are parpamenter that are being passed through as agrument via GET or POST requests
 
-5. API:
+5. API: Is an application Progarmming interface that connects computers and software.  
